@@ -1,11 +1,10 @@
 /*Declare a class ComboLock that works like the combination lock
- in a gym locker, as shown here. The lock is constructed with a
- combina­tion—three numbers between 0 and 39. The reset method
- resets the dial so that it points to 0. The turnLeft and turnRight
- methods turn the dial by a given number of ticks to the left or
- right. The open method attempts to open the lock. The lock opens
- if the user first turned it right to the first number in the combina-
- tion, then left to the second, and then right to the third.
+ in a gym locker, as shown here. 
+ The lock is constructed with a combina­tion—three numbers between 0 and 39. 
+ The reset method resets the dial so that it points to 0. 
+ The turnLeft and turnRight methods turn the dial by a given number of ticks to the left or right. 
+ The open method attempts to open the lock. 
+ The lock opens if the user first turned it right to the first number in the combination, then left to the second, and then right to the third.
  */
 
 public class ComboLock {
