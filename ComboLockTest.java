@@ -40,18 +40,35 @@ public class ComboLockTest {
 	}
 	
 	@Test
-	public void shouldUnlockTest() {
-		
-	}
-	
-	@Test
 	public void turnLeftTest() {
-		
+		lock1.turnRight(13);
+		assertEquals(true, lock1.turnLeft(30));
 	}
 	
 	@Test
 	public void turnRightTest() {
-		
+		assertEquals(true, lock1.turnRight(13));
 	}
-
+	
+	@Test
+	public void unlockTest1() {
+		lock1.reset();
+		lock1.turnRight(13);
+		assertEquals(true, lock1.turnRight(13));
+		lock1.turnLeft(30);
+		assertEquals(true, lock1.turnLeft(30));
+		lock1.turnRight(10);
+		assertEquals(true, lock1.turnRight(10));
+	}
+	
+	@Test
+	public void unlockTest2() {
+		lock1.reset();
+		lock1.turnRight(4);
+		assertEquals(false, lock1.turnRight(4));
+		lock1.turnLeft(2);
+		assertEquals(false,lock1.turnLeft(2));
+		lock1.turnRight(5);
+		assertEquals(false,lock1.turnRight(5));
+	}
 }
